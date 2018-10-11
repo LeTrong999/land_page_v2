@@ -5,16 +5,27 @@ namespace Modules\User\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Routing\Controller;
-
+use Spatie\Permission\Traits\HasRoles;
+use Spatie\Permission\Models\Role;
+use Spatie\Permission\Models\Permission;
+use App\User;
 class UserController extends Controller
 {
+    public $_data;
     /**
      * Display a listing of the resource.
      * @return Response
      */
     public function index()
     {
-        return view('user::index');
+        $users = User::All()->toArray();
+        //echo"<pre>";print_r($data);die;
+        $this->_data['users'] = $users;
+
+        $roles = Role::All()->toArray();
+        $this->_data['roles'] = $roles;
+        $this->_data['stt'] = 1;
+        return view('user::index',$this->_data);
     }
 
     /**
