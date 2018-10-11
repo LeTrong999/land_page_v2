@@ -1,0 +1,226 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+@font-face {
+    font-family: dussmanf;
+    src: url(../font/RobotoCondensed-Regular.ttf);
+}
+@font-face {
+    font-family: dussmanf;
+    src: url(../font/RobotoCondensed-Bold.ttf);
+    font-weight: bold;
+}
+@font-face {
+    font-family: dussmanf;
+    src: url(../font/RobotoCondensed-Italic.ttf);
+    font-style: italic;
+}
+@font-face {
+    font-family: dussmanf;
+    src: url(../font/RobotoCondensed-BoldItalic.ttf);
+    font-style: italic;
+    font-weight: bold;
+}
+
+body,html{
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  font-family: "dussmanf", serif;
+}
+
+body{
+  height: auto; 
+  min-height: 100%;
+}
+/*================================*/
+.lt_left{
+  display: none;
+}
+.text-center{
+  text-align: center;
+}
+.padding_lr{
+  padding: 0 10px;
+}
+.padding_tb{
+  padding: 10px 0px;
+}
+.padding_lrb{
+  padding: 0 10px 10px 10px;
+}
+.no-padding{
+    padding: 0;
+}
+.no-padding-right{
+    padding-right: 0;
+}
+.no-padding-left{
+    padding-left: 0;
+}
+.content-top{
+  padding-top: 20px;
+}
+.content-box{
+  /* background: white; */
+}
+.item{
+  float: left;
+}
+.item:hover{
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(185, 185, 185, 0.9);
+  -webkit-box-shadow: 0 0 10px rgba(185, 185, 185, 0.9);
+  -moz-box-shadow: 0 0 10px rgba(185, 185, 185, 0.9);
+}
+.icon-left-right{
+  font-size: 50px;
+}
+.icon-left-right .lt_right{
+  float: right;
+  position: absolute;
+  right: 10px;
+  top: 100px;
+  z-index: 100;
+  cursor: pointer;
+}
+.icon-left-right .lt_right:hover{
+  color: red;
+}
+.icon-left-right .lt_left{
+  float: left;
+  position: absolute;
+  left: 10px;
+  top: 100px;
+  z-index: 100;
+  cursor: pointer;
+}
+.icon-left-right .lt_left:hover{
+  color: red;
+}
+
+/*================================*/
+.wrapper {
+  height: 100%;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.content-wrapper{
+  min-height: 100%;
+  background-color: #ecf0f5;
+}
+.content-first .content-body .content-box{
+  height: auto;
+  border: 1px solid #cecbcb;
+  overflow: hidden;
+  height: 300px;
+}
+.content-first .content-body .content-box img{
+  width: 200px;
+  height: 200px;
+}
+.content-first .content-body{
+  margin: auto;
+  overflow-x: hidden;
+  position: relative;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+.content-first .content-body > div > div.item{
+  width: 200px;
+  margin: 0 10px;
+  position: relative;
+}
+.content-first .img_width{
+  width: 100%;
+  max-height: 250px;
+}
+.buy_product{
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  height: 45px;
+  line-height: 40px;
+}
+.title_buy{
+  /*border: 1px solid #ccc;
+  height: 30px;
+  line-height: 9px;
+  border-radius: 4px;
+  background: red;
+  padding: 10px*/
+}
+.dec_product{
+  margin-top: 10px;
+}
+/*Contact*/
+.contact-content{
+}
+.contact-content form input{
+    height: 50px;
+}
+
+.contact-content .body .info-com{
+    display: flex;
+}
+.contact-content .body .info-com .content-info span{
+    font-size: 14px;
+    font-weight: bold;
+}
+.contact-content .body .info-com > span{
+    width: 55px;
+    height: 55px;
+    font-size: 20px;
+    background: #2da9bc;
+    text-align: center;
+    line-height: 55px;
+    border-radius: 50%;
+    color: white;
+    margin-right: 10px;
+    flex: 0 0 55px;
+    margin-bottom: 20px;
+}
+.contact-content .body .info-com:nth-child(2) > span{
+    background: #eb768c;
+}
+.contact-content .body .info-com:nth-child(3) >  span{
+    background: #73c8b7;
+}
+.contact-content .body .info-com:nth-child(4) > span{
+    background: #c183d6;
+}
+.contact-content .body .info-com span:first-child{
+    font-weight: bold;
+}
+
+
+footer .info-travel i.fa{
+  color: #0c0808;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+}
+
+footer .title{
+  font-size: 22px;
+}
+footer .master-footer{background: #53889261;color: black;}
+@media screen and (max-width: 414px) {
+  .content-first .content-body{
+    overflow-x: auto;
+  }
+}
+@media screen and (max-width: 1024px) {
+    /*********Contact**********/
+    .contact-first #form_contact .padding_phone_r{
+        padding-right:0;
+    }
+    .contact-first #form_contact .padding_phone_l{
+        padding-left:0;
+    }
+}
+
