@@ -45,12 +45,18 @@
                                 <input type="password" name="repassword" class="form-control" placeholder="Repassword" id="repassword">
                                 <span class="glyphicon glyphicon-lock form-control-feedback"></span>
                             </div>
-                            
+                            <div class="form-group has-feedback">
+                                <label>Cung cấp quyền</label>
+                                </br>
+                                @foreach($roles as $item)
+                                    <p>
+                                        <input type="checkbox" id="role_{{$item['id']}}" name="role[]" value="{{$item['name']}}"> {{$item['name']}}
+                                    </p>
+                                @endforeach
+                            </div>
                             <div class="form-group has-feedback">
                                 <!-- /.col -->
                                 <div style="text-align: right; margin-top: 10px;" id="btn_role">
-                                    <button class="btn btn-primary new_permission" style="display: none;">Làm mới
-                                    </button>
                                     <button class="btn btn-primary" id="btn-add-user">Thêm</button>
                                 </div>
                                 <!-- /.col -->

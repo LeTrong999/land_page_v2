@@ -14,7 +14,6 @@ return [
             'name' => 'required',
             'email' => 'required|email',
             'password' => 'required',
-            'link' => 'required'
         ]
     ],
 

@@ -22,8 +22,8 @@ class UserController extends Controller
         //echo"<pre>";print_r($data);die;
         $this->_data['users'] = $users;
 
-        $roles = Role::All()->toArray();
-        $this->_data['roles'] = $roles;
+        // $roles = Role::All()->toArray();
+        // $this->_data['roles'] = $roles;
         $this->_data['stt'] = 1;
         return view('user::index',$this->_data);
     }
@@ -79,5 +79,17 @@ class UserController extends Controller
      */
     public function destroy()
     {
+    }
+
+
+    public function getadmin(){
+        $users = User::All()->toArray();
+        //echo"<pre>";print_r($data);die;
+        $this->_data['users'] = $users;
+
+        $roles = Role::All()->toArray();
+        $this->_data['roles'] = $roles;
+        $this->_data['stt'] = 1;
+        return view('user::admin',$this->_data);
     }
 }
